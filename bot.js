@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['Exam Bot.','58 Servers...'];
+    var setGame = ['The best Server.','Have Fun..'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -180,7 +180,6 @@ client.on('message', message => {
 »$image / صورة السيرفر
 »$id / ايدي حقك
 »$avatar / صورتك او صورة الي تمنشنو
-»$sup / سيرفر الدعم الفني
 
         ❯ Staff Commands | الأوامر الإدارية :
 
@@ -201,7 +200,7 @@ client.on('message', message => {
 »$deletecolors <number> / لحذف الالوان
 »$servername <name> / لتغيير اسم السيرفر
 »$servericon <link> / لتغيير صورة السيرفر
------------------------------------------
+
         ❯ Games Commands | الأوامر الإدارية :
  
 »$rps  ر ورقة مقص
@@ -252,22 +251,6 @@ msg.guild.setIcon(args)
  .catch(console.error);
 }
 });
-
-
-const Discord = require('discord.js')
-const client = new Discord.Client()
-
-client.on('guildCreate', guild => {
-  let support = client.guilds.get('571105795983278136') // حط هنا ايدي سيرفر السبورت
-  if(support === undefined) return
-  let role = support.roles.find(r => r.name == 'user') // بدلها بأسم الرتبة يلي تبيها للمستخدمين
-  let member = support.members.get(guild.owner.user.id) 
-  if(member) {
-    member.addRole(role)
-  } else {
-    console.log(`this user not in support server`)
-  }
-})
 
 
 
@@ -693,7 +676,7 @@ client.on("message", message => {
 
           if(!message.channel.guild) return;
    if(message.author.bot) return;
-      if(message.content === prefix + "image"){ 
+      if(message.content === prefix + "serveravatar"){ 
           const embed = new Discord.RichEmbed()
   
       .setTitle(`This is  ** ${message.guild.name} **  Photo !`)
@@ -843,7 +826,7 @@ client.on('message', message => {
 
 
    client.on('message', message => {
-     if (message.content === "sup") {
+     if (message.content === "$sup") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
@@ -1052,45 +1035,7 @@ client.on('message', msg => {
     }
 }
 });
-client.on('message', message => {
-   if(!message.channel.guild) return;
-if(message.content.startsWith(prefix + 'clear')) {
-if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
-let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let request = `Requested By ${message.author.username}`;
-message.channel.send(`**Are You sure you want to clear the chat?**`).then(msg => {
-msg.react('✅')
-.then(() => msg.react('❌'))
-.then(() =>msg.react(':negative_squared_cross_mark:'))
 
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
-
-let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
-reaction1.on("collect", r => {
-message.channel.send(`Chat will delete`).then(m => m.delete(5000));
-var msg;
-        msg = parseInt();
-
-      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-      message.channel.sendMessage("", {embed: {
-        title: "`` Chat Deleted ``",
-        color: 0x06DF00,
-        footer: {
-
-        }
-      }}).then(msg => {msg.delete(3000)});
-
-})
-reaction2.on("collect", r => {
-message.channel.send(`**Chat deletion cancelled**`).then(m => m.delete(5000));
-msg.delete();
-})
-})
-}
-});
 client.on('message', async message =>{
 const ms = require("ms");
 if (message.author.omar) return;
