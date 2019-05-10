@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['Crintos Server.','Crintos Best Design..'];
+    var setGame = ['Exam Bot.','58 Servers...'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -58,7 +58,7 @@ client.on('ready', function(){
  console.log(` ???????????????????`);
 });
 client.on('message', message => {
-if (message.content.startsWith(prefix + 's')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
+if (message.content.startsWith('lollsasdfawed')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`**
         **  •>قائمة الاومر :gear:<•**
 **-----------------------------------------**
@@ -159,7 +159,7 @@ if (message.content.startsWith(prefix + 's')) { /// This is The DMS Code Send Th
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === "#yandex") {
+     if (message.content === "$help") {
  
  
  message.author.sendMessage(`
@@ -167,52 +167,51 @@ client.on('message', message => {
      
 		**•>قائمة الاومر :gear:<•**
 **-----------------------------------------**
-**الاوامر العامة :globe_with_meridians: •**	
-**> |$allbots/يعرض كل بوتات السيرفر
-> |$server/يعرض لك معلومات عن السيرفر
-> |$bot/يعرض لك كل معلومات البوت
-> |$cal/اله حاسبة
-> |$rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها
-> |$roles/الرانكات بالسيرفر بشكل جميل
-> |$emojis/يعرض لك كل الايموجيات الي بالسيرفر
-> |$say/يكرر الكلام الي تكتبو
-> |$image/صورة السيرفر
-> |$id/ايدي حقك
-> |$avatar/صورتك او صورة الي تمنشنو
-> |$sup/السيرفر التابع للكلان
------------------------------------------
-        الاوامر الاداريه :lock: •
+**❯ Public Commands | الأوامر العامة :**	
+**»`$allbots`يعرض كل بوتات السيرفر
+»`$server`يعرض لك معلومات عن السيرفر
+»`$bot`يعرض لك كل معلومات البوت
+»`$rooms`يعرض لك كل الرومات الي بالسيرفر مع عددها
+»`$roles`الرانكات بالسيرفر بشكل جميل
+»`$emojis`يعرض لك كل الايموجيات الي بالسيرفر
+»`$say`يكرر الكلام الي تكتبو
+»`$image`صورة السيرفر
+»`$id`ايدي حقك
+»`$avatar`صورتك او صورة الي تمنشنو
+»`$sup`سيرفر الدعم الفني
 
-> |$move @user /  لسحب الشخص الى روومك
-> |$bc / ارسال برودكاست
-> |$rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده
-> |$role @user <rank> / لأعطاء رتبة لعضو معين
-> |$roleremove @user <rank> / لازالة الرتبة من شخص معين
-> |$give all <rank> / لأعطاء رتبة للجميع
-> |$give humans <rank> / لأعطاء رتبة للاشخاص فقط
-> |$clear <number> / مسح الشات بعدد
-> |$clear / مسح الشات
-> |$mute @user <time> / اعطاء العضو ميوت 
-> |$unmute @user / لفك الميوت عن الشخص
-> |$kick @user <reason> / طرد الشخص من السيرفر
-> |$ban @user <reason> / حضر الشخص من السيرفر
-> |$make <number> / ينشا لك الوان مع كم الوان تبي
-> |$deletecolors <number> / لحذف الالوان
+        ❯ Staff Commands | الأوامر الإدارية :
+
+»`$move @user`لسحب الشخص الى روومك
+»`$bc`ارسال برودكاست
+»`$rolebc` <everyone or @role>راسال رساله جماعيه لرتبه محدده
+»`$role @user <rank>`لأعطاء رتبة لعضو معين
+»`$roleremove @user <rank>`لازالة الرتبة من شخص معين
+»`$give all <rank>`لأعطاء رتبة للجميع
+»`$give humans <rank>`لأعطاء رتبة للاشخاص فقط
+»`$clear <number>`مسح الشات بعدد
+»`$clear`مسح الشات
+»`$mute @user <time>`اعطاء العضو ميوت 
+»`$unmute @user`لفك الميوت عن الشخص
+»`$kick @user <reason>`طرد الشخص من السيرفر
+»`$ban @user <reason>`حضر الشخص من السيرفر
+»`$make <number>`ينشا لك الوان مع كم الوان تبي
+»`$deletecolors <number>`لحذف الالوان
 -----------------------------------------
         أوامر الالعاب :video_game: •
  
-> |$rps / حجر ورقة مقص
-> |$speed / اسرع كتابة
-> |$quas / اسئلة عامة
-> |$نكت / نكت 
-> |$لعبة فكك / فكك
-> |$عواصم عشوائي/عواصم
-> |$لعبة كت تويت / كت تويت
-> |$roll <number> / قرعة
-> |$لو خيروك بطريقة حلوة / لو خيروك
-> |$لعبة مريم / مريم
-> |$فوائد ونصائح  / هل تعلم
-> |$يعطيك عقابات قاسية / عقاب**
+> |`$rps`حجر ورقة مقص
+> |`$speed`اسرع كتابة
+> |`$quas`اسئلة عامة
+> |`$نكت`نكت 
+> |`$لعبة فكك`فكك
+> |`$عواصم عشوائي`عواصم
+> |`$لعبة كت تويت`كت تويت
+> |`$roll <number>` / قرعة
+> |`$لو خيروك بطريقة حلوة`لو خيروك
+> |`$لعبة مريم`مريم
+> |`$فوائد ونصائح`هل تعلم
+> |`$يعطيك عقابات قاسية`عقاب**
 
 `);
  
