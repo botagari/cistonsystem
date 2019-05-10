@@ -159,7 +159,7 @@ if (message.content.startsWith(prefix + 's')) { /// This is The DMS Code Send Th
 
 client.on('message', message => {
     if (message.author.bot) return;
-     if (message.content === "$help") {
+     if (message.content === "#yandex") {
  
  
  message.author.sendMessage(`
