@@ -165,9 +165,11 @@ client.on('message', message => {
  message.author.sendMessage(`
  
      
-		**•>قائمة الاومر :gear:<•**
+	  **•>قائمة الاومر :gear:<•**
 **-----------------------------------------**
-**❯ Public Commands | الأوامر العامة :**	
+
+      **❯ Public Commands | الأوامر العامة :**
+
 **»$allbots / يعرض كل بوتات السيرفر 
 »$server/ يعرض لك معلومات عن السيرفر
 »$bot / يعرض لك كل معلومات البوت
@@ -197,6 +199,8 @@ client.on('message', message => {
 »$ban @user <reason> / حضر الشخص من السيرفر
 »$make <number> / ينشا لك الوان مع كم الوان تبي
 »$deletecolors <number> / لحذف الالوان
+»$servername <name> / لتغيير اسم السيرفر
+»$servericon <link> / لتغيير صورة السيرفر
 -----------------------------------------
         ❯ Games Commands | الأوامر الإدارية :
  
@@ -235,10 +239,69 @@ if(message.content.startsWith('$bc')) {
 
 });
 
+client.on("message", msg =>{
+var args = msg.content.split(" ").slice(1).join(" ")
+if(!args) return;
+if(msg.content.startsWith("$servericon")) {
+msg.guild.setIcon(args)
+ .then(msg.reply("**Done ✅ **"))
+ .catch(console.error);
+}else if(msg.content.startsWith("$servername")) {
+    msg.guild.setName(args)
+ .then(g => msg.reply(`**Updated guild name to ${g} :white_check_mark:**`))
+ .catch(console.error);
+}
+});
 
 
+const Discord = require('discord.js')
+const client = new Discord.Client()
+
+client.on('guildCreate', guild => {
+  let support = client.guilds.get('571105795983278136') // حط هنا ايدي سيرفر السبورت
+  if(support === undefined) return
+  let role = support.roles.find(r => r.name == 'user') // بدلها بأسم الرتبة يلي تبيها للمستخدمين
+  let member = support.members.get(guild.owner.user.id) 
+  if(member) {
+    member.addRole(role)
+  } else {
+    console.log(`this user not in support server`)
+  }
+})
 
 
+var Enmap = require('enmap');
+client.antibots = new Enmap({name: "antibot"});
+var antibots = client.antibots;
+var julian = client;
+julian.on("message", codes => {
+var prefix = "-";
+if(codes.content.startsWith("$antibots on")){
+if(codes.author.bot || !codes.channel.guild || codes.author.id != codes.guild.ownerID) return;
+antibots.set(`${codes.guild.id}`, {
+onoff: 'On'
+});
+ 
+ 
+codes.channel.send("AntiBots Join Is On");
+}
+if(codes.content.startsWith("$antibots off")){
+if(codes.author.bot || !codes.channel.guild || codes.author.id != codes.guild.ownerID) return;
+antibots.set(`${codes.guild.id}`, {
+onoff: "Off"
+});
+codes.channel.send("AntiBots Join Is Off");
+}
+});
+ 
+julian.on("guildMemberAdd", member => {
+if(!antibots.get(`${member.guild.id}`)) { antibots.set(`${member.guild.id}`, {
+onoff: "Off"
+});
+}
+if(antibots.get(`${member.guild.id}`).onoff == "Off") return;
+if(member.user.bot) return member.kick()
+});
 
 
 client.on("message", (message) => {
