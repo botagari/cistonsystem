@@ -176,57 +176,47 @@ client.on('message', message => {
  
  message.author.sendMessage(`
  
-     
-	  **•>قائمة الاومر :gear:<•**
-**-----------------------------------------**
+ **•>Commands ⚙**
+**---------------------**
+**❯ Public Commands | الأوامر العامة :**
 
-      **❯ Public Commands | الأوامر العامة :**
+» ``$allbots`` **يعرض لك كل بوتات السيرفر**
+» ``$server`` **يعرض لك معلومات السيرفر**
+» ``$bot`` **يعرض لك معلومات البوت**
+» ``$rooms`` **يعرض لك كل الرومات الي بالسيرفر مع عددها**
+» ``$roles`` **الرانكات بشكل جميل**
+» ``$emojis`` **يعرض كل ايموجيات السيرفر**
+» ``$say`` **يكرر الكلام الي تكتبو**
+» ``$image`` **صورة السيرفر**
+» ``$id`` **ايدي حقك**
+» ``$avatar`` **صورة اي شخص تمنشنو**
 
-**»$allbots / يعرض كل بوتات السيرفر 
-»$server/ يعرض لك معلومات عن السيرفر
-»$bot / يعرض لك كل معلومات البوت
-»$rooms / يعرض لك كل الرومات الي بالسيرفر مع عددها
-»$roles / الرانكات بالسيرفر بشكل جميل
-»$emojis / يعرض لك كل الايموجيات الي بالسيرفر
-»$say / يكرر الكلام الي تكتبو
-»$image / صورة السيرفر
-»$id / ايدي حقك
-»$avatar / صورتك او صورة الي تمنشنو
+**❯ Staff Commands | الأوامر الإدارية :**
 
-        ❯ Staff Commands | الأوامر الإدارية :
+» ``$move @user`` **لسحب شخص الي رومك**
+» ``$bc`` **ارسال برودكاست**
+» ``$role @user <rank>`` **لأعطاء رتبة لعضو معين**
+» ``$give all <rank>`` **لأعطاء رتبة للجميع**
+» ``$give humans <rank>`` **لأعطاء رتبة للأشخاص فقط**
+» ``$clear <number>`` **مسح الشات بعدد**
+» ``$clear`` **مسح الشات**
+» ``$mute @user <time>`` **لأعطاء شخص ميوت**
+» ``$unmute @user`` **لفك الميوت عن شخص**
+» ``$kick @user <reason>`` **طرد شخص من السيرفر**
+» ``$ban @user <reason>`` **حضر شخص من السيرفر**
+» ``$make <number>`` **ينشأ الوان مع كم لون تبي**
+» ``$deletecolors <number>`` **مسح الوان بعدد**
+» ``$servername`` **لتغيير اسم السيرفر**
+» ``$servericon <link>`` **لتغيير صورة السيرفر**
 
-»$move @user / لسحب الشخص الى روومك
-»$bc / ارسال برودكاست
-»$rolebc /  <everyone or @role>راسال رساله جماعيه لرتبه محدده
-»$role @user <rank> / لأعطاء رتبة لعضو معين
-»$roleremove @user <rank> / لازالة الرتبة من شخص معين
-»$give all <rank> / لأعطاء رتبة للجميع
-»$give humans <rank> / لأعطاء رتبة للاشخاص فقط
-»$clear <number> / مسح الشات بعدد
-»$clear / مسح الشات
-»$mute @user <time> / اعطاء العضو ميوت 
-»$unmute @user / لفك الميوت عن الشخص
-»$kick @user <reason> / طرد الشخص من السيرفر
-»$ban @user <reason> / حضر الشخص من السيرفر
-»$make <number> / ينشا لك الوان مع كم الوان تبي
-»$deletecolors <number> / لحذف الالوان
-»$servername <name> / لتغيير اسم السيرفر
-»$servericon <link> / لتغيير صورة السيرفر
+**❯ Games Commands | أوامر الالعاب**
 
-        ❯ Games Commands | الأوامر الإدارية :
- 
-»$rps  ر ورقة مقص
-»$speed  رع كتابة
-»$quas سئلة عامة 
-»$نكت  نكت 
-»$لعبة فكك  فكك
-»$عواصم عشوائي  عواصم
-»$لعبة كت تويت كت تويت
-»$roll <number>  قرعة
-»$لو خيروك بطريقة حلوة  لوخيروك
-»$لعبة مريم  مريم
-»$فوائد ونصائحهل   تعلم
-»$يعطيك عقابات قاسية  عقاب**
+» ``$rps`` **ورقة و مقص**
+» ``$speed`` **اسرع كتابة**
+» ``$quas`` **أسئلة عامة**
+» ``$roll <number>`` **لعبة القرعة**
+
+**❯ Mánches Server •**
 
 `);
  
@@ -290,7 +280,7 @@ client.on("message", (message) => {
             message.channel.send(`:white_check_mark: Has Been, #${c.name}.`);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
-                .addField(`**Welcome To Crintos shop Please Dont Mention** ${message.author.username}!`, `Has Been :white_check_mark: `)
+                .addField(`**Welcome To Mánches Gròup Please Dont Mention** ${message.author.username}!`, `Has Been :white_check_mark: `)
                 .setTimestamp();
             c.send({
                 embed: embed
