@@ -175,49 +175,47 @@ client.on('message', message => {
  
  
  message.author.sendMessage(`
- 
  **•>Commands ⚙**
 **---------------------**
 **❯ Public Commands | الأوامر العامة :**
 
-» ``$allbots`` **يعرض لك كل بوتات السيرفر**
-» ``$server`` **يعرض لك معلومات السيرفر**
-» ``$bot`` **يعرض لك معلومات البوت**
-» ``$rooms`` **يعرض لك كل الرومات الي بالسيرفر مع عددها**
-» ``$roles`` **الرانكات بشكل جميل**
-» ``$emojis`` **يعرض كل ايموجيات السيرفر**
-» ``$say`` **يكرر الكلام الي تكتبو**
-» ``$image`` **صورة السيرفر**
-» ``$id`` **ايدي حقك**
-» ``$avatar`` **صورة اي شخص تمنشنو**
+» $allbots **يعرض لك كل بوتات السيرفر**
+» $server  **يعرض لك معلومات السيرفر**
+» $bot  **يعرض لك معلومات البوت**
+» $rooms  **يعرض لك كل الرومات الي بالسيرفر مع عددها**
+» $roles **الرانكات بشكل جميل**
+» $emojis **يعرض كل ايموجيات السيرفر**
+» $say  **يكرر الكلام الي تكتبو**
+» $image  **صورة السيرفر**
+» $id  **ايدي حقك**
+» $avatar  **صورة اي شخص تمنشنو**
 
 **❯ Staff Commands | الأوامر الإدارية :**
 
-» ``$move @user`` **لسحب شخص الي رومك**
-» ``$bc`` **ارسال برودكاست**
-» ``$role @user <rank>`` **لأعطاء رتبة لعضو معين**
-» ``$give all <rank>`` **لأعطاء رتبة للجميع**
-» ``$give humans <rank>`` **لأعطاء رتبة للأشخاص فقط**
-» ``$clear <number>`` **مسح الشات بعدد**
-» ``$clear`` **مسح الشات**
-» ``$mute @user <time>`` **لأعطاء شخص ميوت**
-» ``$unmute @user`` **لفك الميوت عن شخص**
-» ``$kick @user <reason>`` **طرد شخص من السيرفر**
-» ``$ban @user <reason>`` **حضر شخص من السيرفر**
-» ``$make <number>`` **ينشأ الوان مع كم لون تبي**
-» ``$deletecolors <number>`` **مسح الوان بعدد**
-» ``$servername`` **لتغيير اسم السيرفر**
-» ``$servericon <link>`` **لتغيير صورة السيرفر**
+» $move @user  **لسحب شخص الي رومك**
+» $bc **ارسال برودكاست**
+» $role @user <rank>  **لأعطاء رتبة لعضو معين**
+» $give all <rank>  **لأعطاء رتبة للجميع**
+» $give humans <rank>  **لأعطاء رتبة للأشخاص فقط**
+» $clear <number>  **مسح الشات بعدد**
+» $clear  **مسح الشات**
+» $mute @user <time>  **لأعطاء شخص ميوت**
+» $unmute @user  **لفك الميوت عن شخص**
+» $kick @user <reason>  **طرد شخص من السيرفر**
+» $ban @user <reason>  **حضر شخص من السيرفر**
+» $make <number>  **ينشأ الوان مع كم لون تبي**
+» $deletecolors <number>  **مسح الوان بعدد**
+» $servername <name>  **لتغيير اسم السيرفر**
+» $servericon <link>  **لتغيير صورة السيرفر**
 
 **❯ Games Commands | أوامر الالعاب**
 
-» ``$rps`` **ورقة و مقص**
-» ``$speed`` **اسرع كتابة**
-» ``$quas`` **أسئلة عامة**
-» ``$roll <number>`` **لعبة القرعة**
+» $rps  **ورقة و مقص**
+» $speed  **اسرع كتابة**
+» $quas  **أسئلة عامة**
+» $roll <number>  **لعبة القرعة**
 
 **❯ Mánches Server •**
-
 `);
  
  
@@ -343,7 +341,7 @@ message.channel.send(`**${message.author.username}, your :credit_card: balance i
 });
 
 client.on('message', async message => {
-    let amount = 250;
+    let amount = 25000000;
     if(message.content.startsWith(prefix + "daily")) {
     if(message.author.bot) return;
     if(coolDown.has(message.author.id)) return message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes in \`\`1 Day\`\`.**`);
