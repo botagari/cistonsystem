@@ -133,7 +133,12 @@ if (message.content.startsWith('lollsasdfawed')) { /// This is The DMS Code Send
     }
 }); 
 
-
+client.on('message', message => {
+            if (message.content === '$help') {
+              message.channel.send('**تم الارسال في الخاص**:white_check_mark:  ');
+               
+            }
+}); 
 
 
          client.on('message', message => {
