@@ -133,6 +133,23 @@ if (message.content.startsWith('lollsasdfawed')) { /// This is The DMS Code Send
     }
 }); 
 
+
+
+
+         client.on('message', message => {
+            if (message.content === 'السلام عليكم ورحمة الله وبركاته') {
+              message.channel.send('وعليكم السلام ورحمة الله وبركاته');
+               
+            }
+});
+
+client.on('message', message => {
+            if (message.content === 'السلام عليكم') {
+              message.channel.send('وُعٍلُِيڪم آلُِسلُِآم وُرٍحٍمة آلُِلُِهـ وُبَرٍڪآتهـ ,منوُرٍ ء');
+               
+            }
+}); 
+
 const developers = ["567694723679125514","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
