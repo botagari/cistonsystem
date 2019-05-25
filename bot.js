@@ -37,49 +37,7 @@ var ti={}
 client.on('message', message => {
 if (message.content.startsWith('lollsasdfawed')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`**
-        **  •>قائمة الاومر :gear:<•**
-**-----------------------------------------**
-**الاوامر العامة :globe_with_meridians: •**
-**
-**> |$allbots**/**يعرض كل بوتات السيرفر**
-**> |$server**/**يعرض لك معلومات عن السيرفر**
-**> |$bot**/**يعرض لك كل معلومات البوت**
-**> |$cal**/**اله حاسبة**
-**> |$rooms**/**يعرض لك كل الرومات الي بالسيرفر مع عددها**
-**> |$roles**/**الرانكات بالسيرفر بشكل جميل**
-**> |$emojis**/**يعرض لك كل الايموجيات الي بالسيرفر**
-**> |$say**/**يكرر الكلام الي تكتبو**
-**> |$image**/**صورة السيرفر**
-**> |$id**/**ايدي حقك**
-**> |$avatar**/**صورتك او صورة الي تمنشنو**
-**> |$sup**/**السيرفر التابع للكلان**
-**-----------------------------------------**
-        **الاوامر الاداريه :lock: •**
-**
-**> |$move @user /  لسحب الشخص الى روومك**
-**> |$bc / ارسال برودكاست**
-**> |$rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده**
-**> |$role @user <rank> / لأعطاء رتبة لعضو معين**
-**> |$roleremove @user <rank> / لازالة الرتبة من شخص معين**
-**> |$give all <rank> / لأعطاء رتبة للجميع**
-**> |$give humans <rank> / لأعطاء رتبة للاشخاص فقط**
-**> |$clear <number> / مسح الشات بعدد**
-**> |$clear / مسح الشات**
-**> |$mute @user <time> / اعطاء العضو ميوت **
-**> |$unmute @user / لفك الميوت عن الشخص**
-**> |$kick @user <reason> / طرد الشخص من السيرفر**
-**> |$ban @user <reason> / حضر الشخص من السيرفر**
-**> |$make <number> / ينشا لك الوان مع كم الوان تبي**
-**> |$deletecolors <number> / لحذف الالوان**
------------------------------------------
-        **أوامر الالعاب :video_game: •**
- **       
-**> |$rps / حجر ورقة مقص**
-**> |$speed / اسرع كتابة**
-**> |$quas / اسئلة عامة**
-**> |$نكت / نكت **
-**> |$لعبة فكك / فكك**
-**> |$عواصم عشوائي/عواصم**
+
 **> |$لعبة كت تويت / كت تويت**
 **> |$roll <number> / قرعة**
 **> |$لو خيروك بطريقة حلوة / لو خيروك**
@@ -142,14 +100,14 @@ client.on('message', message => {
 
 
    client.on('message', message => {
-            if (message.content === '!sup') {
+	    if (message.content === '!sup') {
               message.channel.send('**تم الارسال في الخاص** :white_check_mark:  ');
                
             }
 }); 
 
 client.on('message', message => {
-            if (message.content === '!inv	') {
+            if (message.content === prefix + 'inv') {
               message.channel.send('**تم الارسال في الخاص** :white_check_mark:  ');
                
             }
@@ -208,16 +166,17 @@ client.on('message', message => {
  
  
  message.author.sendMessage(`
- **•>Commands ⚙**
+ **>Commands :gear: •**
 **---------------------**
+
 **❯ Public Commands | الأوامر العامة :**
 
-» $allbots **يعرض لك كل بوتات السيرفر**
-» $server  **يعرض لك معلومات السيرفر**
-» $bot  **يعرض لك معلومات البوت**
-» $rooms  **يعرض لك كل الرومات الي بالسيرفر مع عددها**
-» $roles **الرانكات بشكل جميل**
-» $emojis **يعرض كل ايموجيات السيرفر**
+» ${prefix}server  |  > يعرض لك معلومات السيرفر <<<
+» ${prefix}bot  |  > يعرض لك معلومات البوت <<<
+» ${prefix}new  |  > لفتح تذكرة <<<
+» ${prefix}rank  |  > لمعرفة لفلك <<<
+» ${prefix}user @user |  > يعرض معلومات أي شخص <<<
+» ${prefix}memb
 » $say  **يكرر الكلام الي تكتبو**
 » $image  **صورة السيرفر**
 » $id  **ايدي حقك**
