@@ -285,7 +285,7 @@ client.on("message", (message) => {
             message.channel.send(` :white_check_mark:   **تم فتح التذكرة بنجاح** `);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
-                .addField(`**تم فتح تذكرتك**`, ``)
+                .addField(`**تم فتح تذكرتك**`, `Please Wait`)
                 .setTimestamp();
             c.send({
                 embed: embed
@@ -428,7 +428,7 @@ client.on('message', message => {
 
  client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='G.count')
+      if(message.content =='fdafdsft')
 	 
       message.reply(`**${message.guild.memberCount}**`);
     });
@@ -601,7 +601,7 @@ if (command == "asdsadd") {
 });
 
 client.on('message', message => {
-    if (message.content === prefix + "rooms") {
+    if (message.content === "sdfdsfs") {
         if (message.author.bot) return
                       if (!message.guild) return;
 
@@ -619,7 +619,7 @@ client.on('message', message => {
 var AsciiTable = require('ascii-data-table').default
 client.on('message', message =>{
 
-    if(message.content.startsWith(prefix + "roles")){
+    if(message.content.startsWith("asdfd")){
         ros=message.guild.roles.size,
         data = [['Rank', 'RoleName']]
         for(let i =0;i<ros;i++){
@@ -638,7 +638,7 @@ client.on('message', message => {
         const List = message.guild.emojis.map(e => e.toString()).join(" ");
 
         const EmojiList = new Discord.RichEmbed()
-            .setTitle('? Emojis') 
+            .setTitle('Emojis') 
             .setAuthor(message.guild.name, message.guild.iconURL) 
             .setColor('RANDOM') 
             .setDescription(List) 
@@ -1354,7 +1354,7 @@ if (message.content.startsWith(prefix + 'points')) {
   })
 });
 client.on('message', message => {
-    if(message.content == 'move-server') {
+    if(message.content == 'sdadsafdfg') {
              if(!message.author.id === '567694723679125514') return;
     var gimg;
     var gname;
