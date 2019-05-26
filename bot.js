@@ -202,6 +202,30 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "inv") {
+
+	     
+ message.author.sendMessage(`
+https://discordapp.com/api/oauth2/authorize?client_id=576139151640887297&permissions=8&scope=bot
+`);
+ 
+ 
+    }
+});
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "sup") {
+
+	     
+ message.author.sendMessage(`
+ :gear: Support :gear:
+https://discord.gg/zGrRRj9
+`);
+    }
+});
 
 
 
