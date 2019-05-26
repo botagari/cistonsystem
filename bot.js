@@ -285,9 +285,7 @@ client.on("message", (message) => {
             message.channel.send(` :white_check_mark:   **تم فتح التذكرة بنجاح** `);
             const embed = new Discord.RichEmbed()
                 .setColor(0xCF40FA)
-                .addField(`** تم فتح تذكرتك**`, 
-
-` مرحبا بك الرجاء انتظار لحين احد يجي يرد عليك وشكرا`)
+                .addField(`**تم فتح تذكرتك**`, ``)
                 .setTimestamp();
             c.send({
                 embed: embed
